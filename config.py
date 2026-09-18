@@ -4,7 +4,7 @@ import os
 load_dotenv()
 
 #configuration for open weather
-MY_OPENWEATHER_KEY = os.getenv("OpenWeather_Key")
+MY_OPENWEATHER_KEY = os.getenv("OPEN_WEATHER_KEY")
 
 #configuration for astra db
 
