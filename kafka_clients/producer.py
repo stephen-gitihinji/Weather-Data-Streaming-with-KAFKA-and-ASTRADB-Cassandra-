@@ -51,7 +51,7 @@ def stream_data(transformed_data):
     )
 
     producer.send(topic, transformed_data)
-    print('data has been streamed!')
+    print('data has been written to the topic!')
 
 def run_producer():
     raw_data = extract_weather()
