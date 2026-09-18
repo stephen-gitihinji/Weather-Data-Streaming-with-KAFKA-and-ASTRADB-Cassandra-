@@ -28,7 +28,7 @@ def extract_weather():
         weather.append(req.get(BASE_URL, params = parameters))
     return weather
 
-#Transforming the extracted data to remain with what we need
+#Transforming the extracted data
 def transform_data(raw_data):
     weather_data = pd.DataFrame()
     for city_weather in raw_data:
@@ -42,7 +42,7 @@ def transform_data(raw_data):
         weather_data = pd.concat([weather_data, required_data], ignore_index = True)
     return weather_data
 
-#loading the data to a topic for streaming
+#loading the data to a kafka topic
 def stream_data(transformed_data):
     topic = 'weather'
     producer = KafkaProducer(
