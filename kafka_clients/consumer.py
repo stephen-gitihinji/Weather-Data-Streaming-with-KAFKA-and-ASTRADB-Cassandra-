@@ -4,7 +4,7 @@ import json
 import uuid
 
 
-#getting data from the producer
+#getting data from the topic
 consumer = KafkaConsumer( "weather",
     bootstrap_servers = "localhost:9092",
     group_id = "weather-group",
